@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
-> **Everything you need to know about building, programming, and flying custom drones** — from physics fundamentals to autonomous missions with AI integration.
+> **Everything you need to know about building, programming, and flying custom drones** - from physics fundamentals to autonomous missions with AI integration.
 
 Created by [The Drone Community](https://github.com/thedronecommunity) | Pune, India
 
@@ -12,9 +12,9 @@ Created by [The Drone Community](https://github.com/thedronecommunity) | Pune, I
 
 ## What Is This?
 
-A comprehensive, open-source guide covering everything about custom drones. Whether you're a complete beginner or looking to add autonomous capabilities, this guide has you covered.
+A complete, open-source guide covering everything about custom drones. Whether you're a complete beginner or looking to add autonomous capabilities, this guide has you covered.
 
-**11 in-depth guides** • **Practical, not just theory** • **Copy-paste commands** • **Community-driven**
+**15 in-depth guides** • **Practical, not just theory** • **Copy-paste commands** • **Community-driven**
 
 ---
 
@@ -33,6 +33,10 @@ A comprehensive, open-source guide covering everything about custom drones. Whet
 | 09 | [Autonomous Flight](guides/09-autonomous-missions.md) | Waypoints, mission planning, geofencing |
 | 10 | [AI & Computer Vision](guides/10-ai-integration.md) | LLMs for drones, object detection, voice control |
 | 11 | [Maintenance & Troubleshooting](guides/11-maintenance-troubleshooting.md) | Common problems, maintenance schedules, glossary |
+| 12 | [Regulations & Legal](guides/12-regulations-legal.md) | DGCA rules, nano exemptions, airspace zones, international laws |
+| 13 | [FPV Systems & Video](guides/13-fpv-systems.md) | Analog vs digital, cameras, VTx, goggles, antennas, OSD |
+| 14 | [Custom PCB Design](guides/14-custom-pcb-design.md) | Flight controller design, schematics, layout, JLCPCB fab |
+| 15 | [Advanced Navigation](guides/15-advanced-navigation.md) | Optical flow, VIO, SLAM, obstacle avoidance, sensor fusion |
 
 ---
 
@@ -45,6 +49,10 @@ A comprehensive, open-source guide covering everything about custom drones. Whet
 | **Have a drone, want autonomous** | Guide 08 → Raspberry Pi, Guide 09 → Missions |
 | **Developer exploring drones** | Guide 05 → Software, Guide 06 → Protocols |
 | **Looking to add AI** | Guide 10 → AI Integration |
+| **Want to fly FPV** | Guide 13 → FPV Systems |
+| **Designing your own hardware** | Guide 14 → Custom PCB Design |
+| **Indoor/GPS-denied flight** | Guide 15 → Advanced Navigation |
+| **Need to know the rules** | Guide 12 → Regulations & Legal |
 | **Troubleshooting issues** | Guide 11 → Maintenance, or our [Troubleshooting Repo](https://github.com/thedronecommunity/drone-troubleshooting-guide) |
 
 ---
@@ -70,6 +78,12 @@ Level 3: Autonomous System
 ├── Computer vision
 ├── AI-powered decisions
 └── Custom applications
+
+Level 4: Custom Hardware + Full Autonomy
+├── Your own flight controller PCB
+├── Indoor navigation without GPS
+├── SLAM and obstacle avoidance
+└── AI vision pipeline on edge hardware
 ```
 
 ---
@@ -94,7 +108,11 @@ complete-drone-guide/
     ├── 08-raspberry-pi-integration.md
     ├── 09-autonomous-missions.md
     ├── 10-ai-integration.md
-    └── 11-maintenance-troubleshooting.md
+    ├── 11-maintenance-troubleshooting.md
+    ├── 12-regulations-legal.md
+    ├── 13-fpv-systems.md
+    ├── 14-custom-pcb-design.md
+    └── 15-advanced-navigation.md
 ```
 
 ---
@@ -159,19 +177,19 @@ disarm            # Disarm motors
 
 ## 🌟 Features of This Guide
 
-- **Beginner-friendly** — No prior drone knowledge assumed
-- **Practical focus** — Real commands, real configurations
-- **Copy-paste ready** — Commands you can use directly
-- **Comprehensive** — From physics to AI in one place
-- **Open source** — Free forever, community-improved
-- **India-focused examples** — But applicable worldwide
+- **Beginner-friendly** - No prior drone knowledge assumed
+- **Practical focus** - Real commands, real configurations
+- **Copy-paste ready** - Commands you can use directly
+- **Hardware design included** - From schematic to fabrication
+- **Open source** - Free forever, community-improved
+- **India-focused examples** - But applicable worldwide
 
 ---
 
 ## 🔗 Related Resources
 
 ### Our Other Repos
-- [Drone Troubleshooting Guide](https://github.com/thedronecommunity/drone-troubleshooting-guide) — 50 common problems with step-by-step solutions
+- [Drone Troubleshooting Guide](https://github.com/thedronecommunity/drone-troubleshooting-guide) - 70 common problems with step-by-step solutions
 
 ### Official Documentation
 - [ArduPilot Docs](https://ardupilot.org/copter/)
@@ -210,7 +228,7 @@ This guide improves with community input. See [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## 📄 License
 
-MIT License — Use freely, modify, share, even commercially. Just give credit.
+MIT License - Use freely, modify, share, even commercially. Just give credit.
 
 See [LICENSE](LICENSE) for details.
 
