@@ -1,173 +1,120 @@
-# The Complete Drone Guide
+<div align="center">
 
-[![Made with Love](https://img.shields.io/badge/Made%20with-%E2%9D%A4%EF%B8%8F-red.svg)](https://github.com/thedronecommunity)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+# 🚁 The Complete Drone Building Guide
 
-> **Everything you need to know about building, programming, and flying custom drones** - from physics fundamentals to autonomous missions with AI integration.
+### From Zero to Autonomous Flight
 
-Created by [The Drone Community](https://github.com/thedronecommunity) | Pune, India
+**56 in-depth guides** • **Practical, not just theory** • **Copy-paste commands** • **Community-driven**
+
+Built and maintained by [The Drone Community](https://github.com/thedronecommunity)
+
+</div>
 
 ---
 
-## What Is This?
+## 👋 Welcome
 
-A complete, open-source guide covering everything about custom drones. Whether you're a complete beginner or looking to add autonomous capabilities, this guide has you covered.
+Whether you are soldering your first frame or wiring a companion computer for autonomous flight, this repository is a complete, hands-on path to building drones. Every guide is written to teach the concepts, not just list steps, so you understand why things work, not only how.
 
-**45 in-depth guides** • **Practical, not just theory** • **Copy-paste commands** • **Community-driven**
+Start at Guide 01 and work through, or jump to whatever you need. Each guide stands on its own, and related guides are linked throughout.
 
 ---
 
 ## 📚 Guide Index
 
-### Fundamentals (01-06)
+### Getting Started (01-08)
 
-| # | Guide | What You'll Learn |
-|---|-------|-------------------|
-| 01 | [Introduction to Drones](guides/01-introduction.md) | What drones are, consumer vs custom, why build your own |
-| 02 | [Physics of Flight](guides/02-physics-of-flight.md) | Four forces, lift, drag, how quadcopters move |
-| 03 | [Drone Components](guides/03-components.md) | Flight controllers, motors, ESCs, batteries, sensors |
-| 04 | [Drone Types](guides/04-drone-types.md) | Quadcopters, fixed-wing, VTOL, how to choose |
-| 05 | [Software & Firmware](guides/05-software-architecture.md) | ArduPilot, PX4, Betaflight, flight modes, tuning |
-| 06 | [Communication Protocols](guides/06-communication-protocols.md) | MAVLink, UART, I2C, SPI, ELRS, CRSF |
+| #  | Guide                                                             | What You'll Learn                                          |
+| --- | ---------------------------------------------------------------- | ---------------------------------------------------------- |
+| 01 | [Introduction to Drones](guides/01-introduction.md)              | Types, terminology, how a multirotor flies                 |
+| 02 | [Choosing Your First Build](guides/02-choosing-your-build.md)    | Frame sizes, use cases, budget planning                    |
+| 03 | [Essential Tools & Workspace](guides/03-tools-workspace.md)      | Soldering iron, tools, safe workspace setup                |
+| 04 | [Understanding Components](guides/04-components.md)              | Motors, ESCs, flight controllers, power                    |
+| 05 | [Failsafes & Safety Systems](guides/05-failsafes.md)            | Failsafe setup, arming checks, safe flight                 |
+| 06 | [Frame Assembly](guides/06-frame-assembly.md)                   | Building the airframe, mounting motors                     |
+| 07 | [Soldering & Power](guides/07-soldering-power.md)               | PDB, ESC wiring, the battery lead                          |
+| 08 | [Companion Computers](guides/08-raspberry-pi-integration.md)   | Raspberry Pi, MAVLink, connecting to the FC                |
 
-### Building & Hardware (07, 14, 16, 21, 35-36)
+### Flight Control & Software (09-17)
 
-| # | Guide | What You'll Learn |
-|---|-------|-------------------|
-| 07 | [Building Your Drone](guides/07-assembly-guide.md) | Frame assembly, wiring, calibration, first flight |
-| 14 | [Custom PCB Design](guides/14-custom-pcb-design.md) | Flight controller design, schematics, layout, JLCPCB fab |
-| 16 | [Battery Technology Deep Dive](guides/16-battery-technology.md) | LiPo chemistry, C ratings, Li-Ion, charging, safety |
-| 21 | [3D Printing for Drones](guides/21-3d-printing.md) | Materials, print settings, designing mounts and frames |
-| 35 | [Motor & Propeller Selection](guides/35-motor-propeller-selection.md) | KV ratings, stator sizes, prop pitch, efficiency |
-| 36 | [Frame Design & Aerodynamics](guides/36-frame-design.md) | Layouts, materials, carbon fiber, drag reduction |
+| #  | Guide                                                             | What You'll Learn                                          |
+| --- | ---------------------------------------------------------------- | ---------------------------------------------------------- |
+| 09 | [Flashing ArduPilot](guides/09-ardupilot-setup.md)              | Firmware, ground stations, first configuration             |
+| 10 | [AI & Computer Vision](guides/10-ai-integration.md)             | LLMs for drones, object detection basics                   |
+| 11 | [Calibration](guides/11-calibration.md)                        | Accelerometer, compass, radio calibration                  |
+| 12 | [Radio & Telemetry](guides/12-radio-telemetry.md)             | Binding, telemetry links, ground stations                  |
+| 13 | [Flight Modes](guides/13-flight-modes.md)                     | Stabilize, AltHold, Loiter, Auto                           |
+| 14 | [PID Tuning](guides/14-pid-tuning.md)                         | Tuning for stable, responsive flight                       |
+| 15 | [Advanced Navigation](guides/15-advanced-navigation.md)       | Optical flow, VIO, SLAM, GPS-denied basics                 |
+| 16 | [Mission Planning](guides/16-mission-planning.md)             | Waypoints, autonomous missions, geofences                  |
+| 17 | [Logs & Diagnostics](guides/17-logs-diagnostics.md)          | Dataflash logs, crash analysis                             |
 
-### Software & Control (08-10, 17, 22-23, 32-34)
+### Building & Hardware (18-31)
 
-| # | Guide | What You'll Learn |
-|---|-------|-------------------|
-| 08 | [Companion Computers](guides/08-raspberry-pi-integration.md) | Raspberry Pi setup, MAVLink, Python control |
-| 09 | [Autonomous Flight](guides/09-autonomous-missions.md) | Waypoints, mission planning, geofencing |
-| 10 | [AI & Computer Vision](guides/10-ai-integration.md) | LLMs for drones, object detection, voice control |
-| 17 | [PID Tuning](guides/17-pid-tuning.md) | P, I, D explained, Betaflight + ArduPilot tuning, blackbox analysis |
-| 22 | [Ground Control Stations](guides/22-ground-control-stations.md) | Mission Planner, QGC, MAVProxy, custom GCS |
-| 23 | [Telemetry Systems](guides/23-telemetry-systems.md) | SiK radios, ELRS telemetry, OSD, 4G/MQTT |
-| 32 | [Simulation & SITL Testing](guides/32-simulation-sitl.md) | ArduPilot SITL, PX4 SITL, Gazebo, automated testing |
-| 33 | [ROS2 for Drones](guides/33-ros2-drones.md) | MAVROS, ROS2 nodes, camera pipelines, launch files |
-| 34 | [Edge Computing & Embedded AI](guides/34-edge-ai.md) | Hailo, Jetson, Coral, YOLO on edge, deployment pipeline |
+| #  | Guide                                                             | What You'll Learn                                          |
+| --- | ---------------------------------------------------------------- | ---------------------------------------------------------- |
+| 18 | [Custom PCB Design](guides/18-pcb-design.md)                   | Designing your own flight controller board                 |
+| 19 | [ESP32 Flight Controllers](guides/19-esp32-fc.md)             | Building a brushed FC from scratch                         |
+| 20 | [Motors Deep Dive](guides/20-motors.md)                       | KV, sizing, thrust, efficiency                             |
+| 21 | [Propellers](guides/21-propellers.md)                         | Pitch, size, material, balance                             |
+| 22 | [Batteries & Power](guides/22-batteries.md)                   | LiPo care, sizing, safety                                  |
+| 23 | [Frame Materials](guides/23-frame-materials.md)              | Carbon, 3D printing, durability                            |
+| 24 | [FPV Systems](guides/24-fpv.md)                              | Analog and digital FPV, goggles                            |
+| 25 | [Cameras & Gimbals](guides/25-cameras-gimbals.md)           | Payloads, stabilization                                    |
+| 26 | [GPS & Positioning](guides/26-gps.md)                        | GPS modules, RTK, accuracy                                 |
+| 27 | [Sensors](guides/27-sensors.md)                             | Rangefinders, flow, lidar                                  |
+| 28 | [Wiring & Connectors](guides/28-wiring.md)                  | Clean builds, connector choices                            |
+| 29 | [Weatherproofing](guides/29-weatherproofing.md)           | Conformal coating, sealing                                 |
+| 30 | [Payloads & Delivery](guides/30-payloads.md)              | Drop mechanisms, delivery drones                           |
+| 31 | [Fixed-Wing & VTOL](guides/31-fixed-wing-vtol.md)        | Beyond multirotors                                         |
 
-### Navigation & Sensors (15, 31)
+### Advanced & Specialized (32-45)
 
-| # | Guide | What You'll Learn |
-|---|-------|-------------------|
-| 15 | [Advanced Navigation](guides/15-advanced-navigation.md) | Optical flow, VIO, SLAM, obstacle avoidance, sensor fusion |
-| 31 | [Antenna Design & RF Systems](guides/31-antenna-rf.md) | Antenna types, link budget, placement, interference |
+| #  | Guide                                                             | What You'll Learn                                          |
+| --- | ---------------------------------------------------------------- | ---------------------------------------------------------- |
+| 32 | [Simulation & SITL Testing](guides/32-simulation-sitl.md)     | Test safely before flying                                  |
+| 33 | [Swarm & Multi-Drone](guides/33-swarm.md)                    | Coordinating multiple drones                               |
+| 34 | [Edge Computing & Embedded AI](guides/34-edge-ai.md)        | Hailo, YOLO on edge hardware                               |
+| 35 | [Regulations & Licensing](guides/35-regulations.md)         | Rules, registration, flying legally                        |
+| 36 | [Long-Range Flight](guides/36-long-range.md)               | Range, antennas, link budgets                             |
+| 37 | [Autonomous Landing](guides/37-autonomous-landing.md)      | Precision landing, markers                                 |
+| 38 | [Racing Drones](guides/38-racing.md)                       | Building for speed                                         |
+| 39 | [Agricultural Drones](guides/39-agriculture.md)           | Spraying, mapping fields                                   |
+| 40 | [Mapping & Photogrammetry](guides/40-mapping.md)          | Surveying, 3D models                                       |
+| 41 | [Search & Rescue](guides/41-search-rescue.md)            | SAR patterns, thermal                                      |
+| 42 | [Indoor Autonomy](guides/42-indoor-autonomy.md)         | Flying without GPS indoors                                 |
+| 43 | [Networking & Comms](guides/43-networking.md)           | Mesh, LTE, custom links                                    |
+| 44 | [Thermal Imaging](guides/44-thermal-imaging.md)        | Thermal cameras and analysis                               |
+| 45 | [Drone Business](guides/45-drone-business.md)          | Turning skills into a business                             |
 
-### Flying Disciplines (13, 28-29)
+### AI Autonomous Drone Series (46-56)
 
-| # | Guide | What You'll Learn |
-|---|-------|-------------------|
-| 13 | [FPV Systems & Video](guides/13-fpv-systems.md) | Analog vs digital, cameras, VTx, goggles, antennas, OSD |
-| 28 | [Drone Racing](guides/28-drone-racing.md) | Racing builds, Betaflight config, simulators, skills progression |
-| 29 | [Long Range & BVLOS](guides/29-long-range-bvlos.md) | Li-Ion builds, ELRS 900MHz, video links, BVLOS regulations |
-
-### Applications (18-19, 25-27, 42-44)
-
-| # | Guide | What You'll Learn |
-|---|-------|-------------------|
-| 18 | [Swarm Drones](guides/18-swarm-drones.md) | Communication, flocking algorithms, ESP-NOW, multi-vehicle SITL |
-| 19 | [Drone Delivery Systems](guides/19-drone-delivery.md) | Delivery architecture, precision landing, payload release |
-| 24 | [Payload Integration](guides/24-payload-integration.md) | Mounting, gimbals, CG management, camera triggers |
-| 25 | [Mapping & Photogrammetry](guides/25-mapping-photogrammetry.md) | GSD, overlap, WebODM, GCPs, orthomosaics |
-| 26 | [Precision Agriculture](guides/26-precision-agriculture.md) | NDVI, multispectral, spray drones, subsidies |
-| 27 | [Search & Rescue](guides/27-search-rescue.md) | Thermal detection, search patterns, AI-assisted SAR |
-| 42 | [Drone Photography & Videography](guides/42-photography-videography.md) | Camera settings, ND filters, Gyroflow, composition |
-| 43 | [Night Operations](guides/43-night-operations.md) | Navigation lights, low-light cameras, safety |
-| 44 | [Thermal Imaging](guides/44-thermal-imaging.md) | FLIR cameras, integration, building inspection, SAR |
-
-### Operations & Safety (11-12, 20, 30, 37, 41)
-
-| # | Guide | What You'll Learn |
-|---|-------|-------------------|
-| 11 | [Maintenance & Troubleshooting](guides/11-maintenance-troubleshooting.md) | Common problems, maintenance schedules, glossary |
-| 12 | [Regulations & Legal](guides/12-regulations-legal.md) | DGCA rules, nano exemptions, airspace zones, international laws |
-| 20 | [Weather & Environmental Factors](guides/20-weather-environment.md) | Wind, temperature, rain, EMI, seasonal flying in India |
-| 30 | [Power Systems & Energy Harvesting](guides/30-power-systems.md) | PDBs, BECs, power budgets, solar charging |
-| 37 | [Drone Security & Counter-Drones](guides/37-drone-security.md) | GPS spoofing, MAVLink signing, counter-drone systems |
-| 41 | [Data Logging & Flight Analysis](guides/41-data-logging.md) | Blackbox, log analysis, crash investigation, vibration |
-
-### Advanced Platforms (39-40)
-
-| # | Guide | What You'll Learn |
-|---|-------|-------------------|
-| 39 | [Fixed-Wing & VTOL Design](guides/39-fixed-wing-vtol.md) | Wing types, QuadPlane, tiltrotor, ArduPlane setup |
-| 40 | [Underwater & Hybrid Drones](guides/40-underwater-hybrid.md) | ROV components, ArduSub, waterproofing, hybrid designs |
-
-### Business & Career (38, 45)
-
-| # | Guide | What You'll Learn |
-|---|-------|-------------------|
-| 38 | [Commercial Drone Operations](guides/38-commercial-operations.md) | RPL, UAOP, insurance, pricing, client acquisition |
-| 45 | [Building a Drone Business](guides/45-drone-business.md) | Startup costs, revenue models, scaling, govt schemes |
+| #  | Guide                                                                                       | What You'll Learn                                                    |
+| --- | ------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| 46 | [AI Autonomous Drone: Overview & Architecture](guides/46-ai-autonomous-drone-overview.md)   | The two-brain model, the full stack, where the intelligence lives    |
+| 47 | [Linking the Two Brains](guides/47-companion-mavlink-link.md)                                | MAVLink over ethernet, the heartbeat, the one-reader principle       |
+| 48 | [Giving the Drone Eyes](guides/48-edge-vision-hailo.md)                                      | Camera vs perception, YOLO on the Hailo, what a detection means      |
+| 49 | [The Language Brain](guides/49-language-brain-llm.md)                                        | Natural-language control, constrained autonomy, local vs cloud LLM   |
+| 50 | [The Safety Layer](guides/50-safety-layer.md)                                                | Propose and dispose, why the AI cannot bypass safety, warn vs block  |
+| 51 | [Feeding the AI Good Context](guides/51-context-telemetry-perception.md)                     | Telemetry and perception as text, why context drives good decisions  |
+| 52 | [Making It Visible](guides/52-live-dashboard.md)                                             | The live dashboard, visibility for trust and debugging               |
+| 53 | [Flying Without GPS](guides/53-optical-flow-gps-denied.md)                                   | Optical flow, position without GPS, the LOITER hold gate             |
+| 54 | [The Closed Loop](guides/54-autonomous-missions.md)                                          | Perceive, reason, act; open-ended autonomy inside safe limits        |
+| 55 | [From Simulation to Real Flight](guides/55-simulation-to-real.md)                            | The safety ladder from SITL to real flight, thinking about risk      |
+| 56 | [The Complete Picture (Summary + Diagrams)](guides/56-ai-autonomous-drone-summary.md)       | The whole series tied together, with architecture and flow diagrams  |
 
 ---
 
 ## 🎯 Who Is This For?
 
-| You Are... | Start With... |
-|------------|---------------|
-| **Complete beginner** | Guide 01 → Read sequentially |
-| **Know basics, want to build** | Guide 03 → Components, then Guide 07 → Assembly |
-| **Have a drone, want autonomous** | Guide 08 → Raspberry Pi, Guide 09 → Missions |
-| **Developer exploring drones** | Guide 05 → Software, Guide 06 → Protocols |
-| **Looking to add AI** | Guide 10 → AI Integration, Guide 34 → Edge AI |
-| **Want to fly FPV** | Guide 13 → FPV Systems, Guide 28 → Racing |
-| **Designing your own hardware** | Guide 14 → Custom PCB, Guide 35 → Motors |
-| **Indoor/GPS-denied flight** | Guide 15 → Advanced Navigation |
-| **Need to know the rules** | Guide 12 → Regulations & Legal |
-| **Building for delivery** | Guide 19 → Delivery Systems |
-| **Starting a drone business** | Guide 38 → Commercial Ops, Guide 45 → Business |
-| **Want to fly long range** | Guide 29 → Long Range & BVLOS |
-| **Learning ROS2/simulation** | Guide 32 → SITL, Guide 33 → ROS2 |
-| **Troubleshooting issues** | Guide 11 → Maintenance, or our [Troubleshooting Repo](https://github.com/thedronecommunity/drone-troubleshooting-guide) |
-
----
-
-## 🛠️ What You Can Build
-
-From simple to advanced:
-
-```
-Level 1: Manual Quadcopter
-├── Stabilized flight
-├── Altitude hold
-└── Basic FPV
-
-Level 2: GPS-Enabled Drone  
-├── Position hold (Loiter)
-├── Return to launch
-├── Waypoint missions
-└── Geofencing
-
-Level 3: Autonomous System
-├── Companion computer (Raspberry Pi)
-├── Computer vision
-├── AI-powered decisions
-└── Custom applications
-
-Level 4: Custom Hardware + Full Autonomy
-├── Your own flight controller PCB
-├── Indoor navigation without GPS
-├── SLAM and obstacle avoidance
-└── AI vision pipeline on edge hardware
-
-Level 5: Commercial Operations
-├── Mapping and survey missions
-├── Agricultural spraying
-├── Delivery systems
-├── Swarm coordination
-└── Fixed-wing / VTOL platforms
-```
+| If you are...                              | Start here                                                      |
+| ------------------------------------------ | --------------------------------------------------------------- |
+| **Completely new to drones**               | Guide 01 → Getting Started section                              |
+| **Ready to build your first drone**        | Guide 06 → Building & Hardware                                  |
+| **Setting up flight software**             | Guide 09 → Flight Control & Software                            |
+| **Looking to add AI and computer vision**  | Guide 10 → Guide 34                                             |
+| **Building a full AI autonomous drone**    | Guide 46 → AI Autonomous Drone Series (46-56)                   |
+| **Turning this into a business**           | Guide 45 → Drone Business                                       |
 
 ---
 
@@ -175,179 +122,46 @@ Level 5: Commercial Operations
 
 ```
 complete-drone-guide/
-│
-├── README.md                 # You are here
-├── LICENSE                   # MIT License
-├── CONTRIBUTING.md           # How to contribute
-│
+├── README.md
 └── guides/
     ├── 01-introduction.md
-    ├── 02-physics-of-flight.md
-    ├── 03-components.md
-    ├── 04-drone-types.md
-    ├── 05-software-architecture.md
-    ├── 06-communication-protocols.md
-    ├── 07-assembly-guide.md
-    ├── 08-raspberry-pi-integration.md
-    ├── 09-autonomous-missions.md
-    ├── 10-ai-integration.md
-    ├── 11-maintenance-troubleshooting.md
-    ├── 12-regulations-legal.md
-    ├── 13-fpv-systems.md
-    ├── 14-custom-pcb-design.md
-    ├── 15-advanced-navigation.md
-    ├── 16-battery-technology.md
-    ├── 17-pid-tuning.md
-    ├── 18-swarm-drones.md
-    ├── 19-drone-delivery.md
-    ├── 20-weather-environment.md
-    ├── 21-3d-printing.md
-    ├── 22-ground-control-stations.md
-    ├── 23-telemetry-systems.md
-    ├── 24-payload-integration.md
-    ├── 25-mapping-photogrammetry.md
-    ├── 26-precision-agriculture.md
-    ├── 27-search-rescue.md
-    ├── 28-drone-racing.md
-    ├── 29-long-range-bvlos.md
-    ├── 30-power-systems.md
-    ├── 31-antenna-rf.md
-    ├── 32-simulation-sitl.md
-    ├── 33-ros2-drones.md
-    ├── 34-edge-ai.md
-    ├── 35-motor-propeller-selection.md
-    ├── 36-frame-design.md
-    ├── 37-drone-security.md
-    ├── 38-commercial-operations.md
-    ├── 39-fixed-wing-vtol.md
-    ├── 40-underwater-hybrid.md
-    ├── 41-data-logging.md
-    ├── 42-photography-videography.md
-    ├── 43-night-operations.md
+    ├── 02-choosing-your-build.md
+    ├── ... (guides 03 through 43)
     ├── 44-thermal-imaging.md
-    └── 45-drone-business.md
+    ├── 45-drone-business.md
+    ├── 46-ai-autonomous-drone-overview.md
+    ├── 47-companion-mavlink-link.md
+    ├── 48-edge-vision-hailo.md
+    ├── 49-language-brain-llm.md
+    ├── 50-safety-layer.md
+    ├── 51-context-telemetry-perception.md
+    ├── 52-live-dashboard.md
+    ├── 53-optical-flow-gps-denied.md
+    ├── 54-autonomous-missions.md
+    ├── 55-simulation-to-real.md
+    ├── 56-ai-autonomous-drone-summary.md
+    └── images/
+        ├── architecture-stack.svg
+        ├── perceive-reason-act.svg
+        └── safety-ladder.svg
 ```
-
----
-
-## ⚡ Quick Reference
-
-### LiPo Battery Voltages
-
-| Cells | Nominal | Full | Empty | Storage |
-|-------|---------|------|-------|---------|
-| 1S | 3.7V | 4.2V | 3.0V | 3.8V |
-| 4S | 14.8V | 16.8V | 12.0V | 15.2V |
-| 6S | 22.2V | 25.2V | 18.0V | 22.8V |
-
-### Motor Layout (Quad X - Betaflight)
-
-```
-       FRONT
-   4 (CCW)   2 (CW)
-       \     /
-        \   /
-         \ /
-          X
-         / \
-        /   \
-       /     \
-   3 (CW)    1 (CCW)
-       BACK
-```
-
-### Common Commands
-
-```
-# MAVProxy connection
-mavproxy.py --master=/dev/ttyACM0 --console
-
-# Flight modes
-mode STABILIZE    # Manual with auto-level
-mode LOITER       # GPS position hold
-mode RTL          # Return to launch
-mode GUIDED       # Computer control
-
-# Arming
-arm throttle      # Arm motors
-disarm            # Disarm motors
-```
-
----
-
-## 🔒 Safety Essentials
-
-| Rule | Why It Matters |
-|------|---------------|
-| **Props OFF during bench testing** | Motors spin unexpectedly |
-| **Never fly over people** | Drones fail, batteries explode |
-| **Always configure failsafe** | RC loss should trigger RTL |
-| **Check battery before every flight** | Low voltage = uncontrolled descent |
-| **Know your local regulations** | Fines, legal issues, accidents |
-| **Fly in open areas first** | Learn before flying near obstacles |
-
----
-
-## 🌟 Features of This Guide
-
-* **Beginner-friendly** - No prior drone knowledge assumed
-* **Practical focus** - Real commands, real configurations
-* **Copy-paste ready** - Commands you can use directly
-* **Hardware design included** - From schematic to fabrication
-* **Open source** - Free forever, community-improved
-* **India-focused examples** - But applicable worldwide
-
----
-
-## 🔗 Related Resources
-
-### Our Other Repos
-* [Drone Troubleshooting Guide](https://github.com/thedronecommunity/drone-troubleshooting-guide) - 70 common problems with step-by-step solutions
-
-### Official Documentation
-* [ArduPilot Docs](https://ardupilot.org/copter/)
-* [PX4 User Guide](https://docs.px4.io/)
-* [Betaflight Wiki](https://betaflight.com/docs/wiki)
-* [QGroundControl](https://docs.qgroundcontrol.com/)
-
-### Community
-* [ArduPilot Forum](https://discuss.ardupilot.org/)
-* [Oscar Liang Blog](https://oscarliang.com/)
-* [Joshua Bardwell YouTube](https://youtube.com/@JoshuaBardwell)
 
 ---
 
 ## 🤝 Contributing
 
-This guide improves with community input. See [CONTRIBUTING.md](CONTRIBUTING.md).
+Found a mistake? Have a better way to explain something? Built something worth sharing? Contributions are welcome. Open an issue or a pull request.
 
-**Ways to help:**
-* Fix errors and typos
-* Add diagrams and images
-* Improve explanations
-* Translate to other languages
-* Share your experiences
+## ⭐ Support
+
+If these guides helped you, star the repository. It helps more builders find it.
 
 ---
 
-## 📞 Contact
+<div align="center">
 
-**The Drone Community**
-* GitHub: [@thedronecommunity](https://github.com/thedronecommunity)
-* Instagram: [@thedrone.community](https://instagram.com/thedrone.community)
-* Phone: +91 7972632187
-* Location: Pune, India
+**Happy Flying**
 
----
+The Drone Community
 
-## 📄 License
-
-MIT License - Use freely, modify, share, even commercially. Just give credit.
-
-See [LICENSE](LICENSE) for details.
-
----
-
-*The best way to learn is to build.*
-
-**Happy Flying! 🚁**
+</div>
