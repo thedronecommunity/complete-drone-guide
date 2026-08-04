@@ -75,8 +75,8 @@ Unlike planes or helicopters, quadcopters control movement by changing individua
 | **Backward** | Front motors speed up, rear slow |
 | **Right** | Left motors speed up, right slow |
 | **Left** | Right motors speed up, left slow |
-| **Rotate CW** | Motors 1&3 speed up, 2&4 slow |
-| **Rotate CCW** | Motors 2&4 speed up, 1&3 slow |
+| **Rotate CW** | Motors 1&4 (CCW pair) speed up, 2&3 (CW pair) slow |
+| **Rotate CCW** | Motors 2&3 (CW pair) speed up, 1&4 (CCW pair) slow |
 
 ### Why This Works
 
@@ -102,6 +102,14 @@ Unlike planes or helicopters, quadcopters control movement by changing individua
 
 This alternating pattern cancels torque. Without it, the drone would spin uncontrollably.
 
+**Why pitch/roll and yaw use different motor pairings:**
+
+Pitch and roll mixing groups motors by *physical position* (front vs. rear, left vs. right), because tilting the thrust vector is what moves the drone horizontally. Yaw mixing groups motors by *spin direction* instead (the two diagonal motors that spin the same way), because rotation comes from reaction torque, not tilt.
+
+Each spinning propeller pushes back against the frame in the direction opposite its own spin (Newton's third law). Speeding up the CW pair (2 & 3) increases the CCW reaction torque on the frame, yawing it CCW. Speeding up the CCW pair (1 & 4) increases the CW reaction torque, yawing it CW. Because 1 & 4 and 2 & 3 are each split evenly between one front and one rear motor, total front thrust and total rear thrust stay balanced — so the drone yaws in place instead of also pitching.
+
+A common mistake is pairing 1&3 or 2&4 for yaw — but those are the front pair and rear pair, not the same-spin-direction pair, so that mixing produces a pitch (forward/backward tilt) instead of a clean rotation.
+
 ### Movement Physics
 
 **Forward flight example:**
@@ -111,7 +119,13 @@ This alternating pattern cancels torque. Without it, the drone would spin uncont
 4. Lift vector now has horizontal component
 5. Drone moves forward
 
-The flight controller does this automatically - you just push the stick forward.
+**Rotate CW example:**
+1. Motors 1 & 4 (the CCW pair) speed up; motors 2 & 3 (the CW pair) slow down
+2. Total front thrust and total rear thrust stay roughly equal, so the drone doesn't pitch
+3. The CCW pair's reaction torque now dominates, pushing the frame CW
+4. Drone rotates in place, nose swinging clockwise (viewed from above)
+
+The flight controller does this automatically - you just push the stick (or twist the yaw control).
 
 ---
 
@@ -332,9 +346,10 @@ Motors must spin faster to generate same lift in thin air.
 1. **Four forces**: Lift, weight, thrust, drag - all must balance
 2. **Quadcopter control**: All movement from motor speed changes
 3. **Motor pattern**: Alternating CW/CCW cancels torque
-4. **Bernoulli**: Fast air = low pressure = lift
-5. **Three axes**: Pitch, roll, yaw
-6. **Weight matters**: Every gram affects flight time
+4. **Pitch/roll** mix by physical position (front/rear, left/right); **yaw** mixes by spin direction (diagonal same-spin pair), not position
+5. **Bernoulli**: Fast air = low pressure = lift
+6. **Three axes**: Pitch, roll, yaw
+7. **Weight matters**: Every gram affects flight time
 
 ---
 
