@@ -62,6 +62,21 @@
 
 ## Common Problems & Solutions
 
+### Record the fault before replacing a part
+
+Write down what you saw before changing a setting or ordering a replacement. Keep the observation separate from your guess about the cause.
+
+| Record | Example |
+|--------|---------|
+| Exact setup | Drone and controller model, battery in use, and firmware version if known |
+| What happened | Exact message or behavior, when it appeared, and whether it happened once or repeatedly |
+| What changed | A recent update, transport, a hard landing, moisture exposure, or an earlier repair |
+| What you can share | A screenshot, relevant log excerpt, or photo of visible damage. Remove account details and private locations before posting. |
+
+For example, if a DJI controller shows a gimbal warning after a hard landing, keep the exact message and a photo of any visible damage. The warning alone does not identify which part failed. Start with [DJI's model-specific documentation](https://www.dji.com/downloads). For a worked example of what to record, see the [DJI error-message evidence guide](https://reboot-hub.com/blogs/support-learning/dji-drone-error-codes-technical-reference) from Reboot Hub, an independent repair supplier.
+
+**Warning:** If you see visible damage or battery swelling, leave the drone powered down and get it assessed before testing or flying it again.
+
 ### Connection Problems
 
 **Symptom:** Cannot connect to flight controller
